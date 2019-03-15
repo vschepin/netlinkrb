@@ -7,3 +7,4 @@
 rdoc
 coverage
 tmp/*
+.idea

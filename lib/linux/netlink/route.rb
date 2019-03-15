@@ -14,6 +14,7 @@ module Netlink
     autoload :AddrHandler, 'linux/netlink/route/addr_handler'
     autoload :RouteHandler, 'linux/netlink/route/route_handler'
     autoload :RuleHandler, 'linux/netlink/route/rule_handler'
+    autoload :NeighborHandler, 'linux/netlink/route/neighbor_handler'
 
     # This class formats and receives messages using NETLINK_ROUTE protocol
     class Socket < NLSocket
@@ -43,6 +44,10 @@ module Netlink
 
       def rule
         @rule ||= RuleHandler.new(self)
+      end
+
+      def neighbor
+        @neigh ||= NeighborHandler.new(self)
       end
 
       # Convert an interface index into name string, or nil if the

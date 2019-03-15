@@ -509,4 +509,36 @@ module Linux
 
   IPT_CONTINUE      = XT_CONTINUE
   IPT_RETURN      = XT_RETURN
+
+  NDA_UNSPEC       = 0
+  NDA_DST          = 1
+  NDA_LLADDR       = 2
+  NDA_CACHEINFO    = 3
+  NDA_PROBES       = 4
+  NDA_VLAN         = 5
+  NDA_PORT         = 6
+  NDA_VNI          = 7
+  NDA_IFINDEX      = 8
+  NDA_MASTER       = 9
+  NDA_LINK_NETNSID = 10
+  NDA_SRC_VNI      = 11
+
+  NTF_USE         = 0x01
+  NTF_SELF	      = 0x02
+  NTF_MASTER	    = 0x04
+  NTF_PROXY	      = 0x08
+  NTF_EXT_LEARNED	= 0x10
+  NTF_OFFLOADED   = 0x20
+  NTF_STICKY	    = 0x40
+  NTF_ROUTER	    = 0x80
+
+  NUD_INCOMPLETE	= 0x01
+  NUD_REACHABLE	  = 0x02
+  NUD_STALE	      = 0x04
+  NUD_DELAY	      = 0x08
+  NUD_PROBE	      = 0x10
+  NUD_FAILED	    = 0x20
+  NUD_NOARP	      = 0x40
+  NUD_PERMANENT	  = 0x80
+  NUD_NONE	      = 0x00
 end
