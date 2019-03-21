@@ -35,6 +35,7 @@ module Netlink
         :pack   => lambda { |val,obj| val.to_a.pack("L*") },
         :unpack => lambda { |str,obj| RTACacheInfo.new(*(str.unpack("L*"))) }
     rtattr :table2, RTA_TABLE, :uint32   # NOTE: table in two places!
+    rtattr :fw_mark, RTA_MARK, :uint32
   end
 
   class RTAMetrics < RtattrMessage
