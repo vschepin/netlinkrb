@@ -50,6 +50,8 @@ module Linux
           filter(:flags) { |o,v| (o.flags & v) == v }
           filter(:noflags) { |o,v| (o.flags & v) == 0 }
           filter(:iface) { |o,v| o.iface == v }
+          filter(:state) { |o,v| o.state == v }
+          filter(:dst) { |o,v| o.dst == v }
         end
 
         def list(filter=nil, &blk)
